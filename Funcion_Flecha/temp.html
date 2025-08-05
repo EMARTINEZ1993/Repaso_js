@@ -16,33 +16,25 @@
   <!-- Navegación -->
   <nav>
     <a href="../index.html">Inicio</a>
-    <a href="../Funciones/index.html">Funciones</a>
-    <a href="../Funcion_Flecha/index.html">Función Flecha</a>
-    <a href="index.html">Callback</a>
+    <a href="../Funciones/Index.html">Funciones</a>
+    <a href="Index.html">Función Flecha</a>
+    <a href="../Callback/Index.html">Callback</a>
     <a href="../promesas/index.html">Promesas</a>
     <a href="../async/index.html">Async</a>
   </nav>
 
-  <!-- Sección teórica: ¿Qué es un Callback? -->
+  <!-- Sección teórica: Función flecha -->
   <section>
-    <h1>¿Qué es un Callback?</h1>
+    <h1>¿Qué es una función flecha en JavaScript?</h1>
     <p>
-      Un callback es una función que se pasa como argumento a otra función,
-      con el propósito de ser llamada y ejecutada dentro de esa función principal.
-      Este mecanismo permite controlar el orden de ejecución del código,
-      especialmente útil en tareas asíncronas como respuestas de servidor,
-      temporizadores o eventos del usuario.
-    </p>
-    <p>
-      Los callbacks permiten decirle a una función qué hacer después de completar una tarea,
-      haciendo que el código sea más flexible y reutilizable.
+      Una función flecha es una forma abreviada y moderna de escribir funciones en JavaScript.
+      Se escribe usando la flecha <code>=&gt;</code> y no tiene su propio <code>this</code>,
+      lo que la hace útil en muchas situaciones como callbacks, promesas y funciones pequeñas.
     </p>
   </section>
 
-  <!-- Sección práctica con 3 ejercicios -->
+  <!-- Ejercicio 1: Saludar con nombre ingresado -->
   <section>
-
-    <!-- Ejercicio 1: Saludar con callback -->
     <form action="">
       <h3>Saludar 👋🏽</h3>
       <label for="miInput">Nombre:</label>
@@ -50,8 +42,10 @@
       <button type="button" id="miBoton">Mostrar Resultado</button>
       <p id="resultado"></p>
     </form>
+  </section>
 
-    <!-- Ejercicio 2: Sumar números -->
+  <!-- Ejercicio 2: Sumar dos números -->
+  <section>
     <form action="">
       <h3>Sumar 🧮</h3>
       <label for="n1">Número:</label>
@@ -63,8 +57,10 @@
       <button type="button" id="botonSumar">Sumar</button>
       <p id="resultadoSuma"></p>
     </form>
+  </section>
 
-    <!-- Ejercicio 3: Calcular total de una venta -->
+  <!-- Ejercicio 3: Calcular total de una venta -->
+  <section>
     <form action="">
       <h3>Calcular Venta 💸</h3>
 
@@ -82,7 +78,6 @@
 
       <button type="button" id="botonCompra">Calcular Venta</button>
     </form>
-
   </section>
 
   <!-- Pie de página -->
@@ -91,7 +86,7 @@
     <p>By: <a href="#">Eliana Martínez ⚡</a></p>
   </footer>
 
-  <!-- Script asociado -->
+  <!-- Script JS -->
   <script src="scripts.js"></script>
 </body>
 </html>
