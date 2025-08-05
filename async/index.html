@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funciones en JS</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Encabezado principal -->
+  <header>
+    <h1>Repaso de JavaScript - Introducción a React</h1>
+  </header>
+
+  <!-- Navegación -->
+  <nav>
+    <a href="/index.html">Inicio</a>
+    <a href="/Funciones/">Funciones</a>
+    <a href="/Funcion_Flecha/">Función Flecha</a>
+    <a href="/Callback/">Callback</a>
+    <a href="/promesas/">Promesas</a>
+    <a href="index.html">Async</a>
+  </nav>
+
+  <!-- Explicación teórica sobre async -->
+  <section>
+    <h1>¿Qué es una función Async en JavaScript?</h1>
+    <p>
+      <code>async</code> es una palabra clave que se usa para declarar una función asíncrona,
+      es decir, una función que puede esperar operaciones que tardan en completarse,
+      como llamadas a un servidor, lecturas de archivos o temporizadores.
+    </p>
+    <p>
+      Al declarar una función con <code>async</code>, esta devuelve automáticamente una promesa.
+      Dentro de ella, se puede usar <code>await</code> para pausar la ejecución hasta que otra promesa se resuelva.
+    </p>
+  </section>
+
+  <!-- Cargar usuarios desde API simulada -->
+  <section>
+    <h2>Usuarios desde API con Async</h2>
+    <form action="">
+      <button id="btnCargar" type="button">Cargar Usuarios</button>
+    </form>
+    <ul id="listaUsuarios"></ul>
+  </section>
+
+  <!-- Verificar si puede votar -->
+  <section>
+    <form action="">
+      <h2>Verificar si puedes votar 🗳️</h2>
+      <input type="number" id="edad" placeholder="Ingresa tu edad" />
+      <button type="button" onclick="puedeVotar()">Verificar</button>
+      <p id="resultado"></p>
+    </form>
+  </section>
+
+  <!-- Buscar usuario por ID -->
+  <section>
+    <h2>Buscar Usuario 👤</h2>
+    <form action="">
+      <input type="number" id="userId" placeholder="Ingresa ID del usuario (1-3)" />
+      <button type="button" onclick="buscarUsuario()">Buscar</button>
+      <p id="usuarioResultado"></p>
+    </form>
+  </section>
+
+  <!-- Calcular total de compra -->
+  <section>
+    <form action="">
+      <h2>Calcular Total de Compra 💰</h2>
+      <input type="number" id="precio" placeholder="Precio del producto" />
+      <input type="number" id="cantidad" placeholder="Cantidad" />
+      <button type="button" onclick="calcularCompra()">Calcular</button>
+      <p id="compraResultado"></p>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 Repaso JS para React</p>
+    <p>By: <a href="#">Eliana Martínez ⚡</a></p>
+  </footer>
+
+  <!-- Archivo JavaScript -->
+  <script src="scripts.js"></script>
+</body>
+</html>

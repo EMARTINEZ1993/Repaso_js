@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repaso JavaScript - Introducción a React</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Encabezado principal -->
+  <header>
+    <h1>Repaso de JavaScript - Introducción a React</h1>
+  </header>
+
+  <!-- Navegación principal -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="Funciones/Index.html">Funciones</a>
+    <a href="Funcion_Flecha/Index.html">Función Flecha</a>
+    <a href="Callback/Index.html">Callback</a>
+    <a href="promesas/index.html">Promesas</a>
+    <a href="async/index.html">Async</a>
+  </nav>
+
+  <!-- Sección de introducción -->
+  <section>
+    <h2>Inicio del Repaso Práctico de JavaScript</h2>
+    <p>
+      Este repaso está diseñado para introducirte a conceptos clave de JavaScript,
+      fundamentales para el desarrollo con React. Estos conceptos incluyen funciones modernas,
+      manejo de asincronía y la estructura de código reutilizable, que son pilares en la creación
+      de componentes en React.
+    </p>
+  </section>
+
+  <!-- Sección: Funciones (teoría) -->
+  <section>
+    <h3>Funciones</h3>
+    <ul>
+      <li><strong>Definición Ampliada:</strong> Las funciones son bloques de código reutilizables que realizan una tarea específica.</li>
+      <li><strong>Uso:</strong> Base del desarrollo modular. En React se usan para crear componentes funcionales.</li>
+      <li><strong>Cuándo es necesario:</strong> Al agrupar instrucciones que se repiten o para dividir el código.</li>
+      <li><strong>Ventaja:</strong> Reutilización y legibilidad del código, además de facilitar la depuración.</li>
+    </ul>
+  </section>
+
+  <!-- Sección: Funciones (ejemplo básico) -->
+  <section>
+    <h2>Funciones</h2>
+    <p>Una función en JavaScript es un bloque de código reutilizable que realiza una tarea específica.</p>
+    <p><strong>¿Para qué se usan?</strong> Para encapsular lógica y dividir un programa en partes pequeñas.</p>
+    <pre><code>function saludar(nombre) {
+  return "Hola " + nombre;
+}</code></pre>
+  </section>
+
+  <!-- Sección: Funciones Flecha (teoría) -->
+  <section>
+    <h3>Función flecha (Arrow Function)</h3>
+    <ul>
+      <li><strong>Definición Ampliada:</strong> Sintaxis concisa de funciones introducida en ES6.</li>
+      <li><strong>Uso:</strong> Popular en React para componentes y eventos.</li>
+      <li><strong>Cuándo es necesario:</strong> Cuando se necesita preservar el contexto <code>this</code>.</li>
+      <li><strong>Ventaja:</strong> Sintaxis corta y manejo automático del <code>this</code>.</li>
+    </ul>
+  </section>
+
+  <!-- Sección: Funciones Flecha (ejemplo) -->
+  <section>
+    <h2>Función Flecha</h2>
+    <p>Las funciones flecha son una forma más corta de escribir funciones.</p>
+    <p><strong>¿Dónde se usa en React?</strong> En eventos, efectos, map, filtros, y componentes simples.</p>
+    <pre><code>const saludar = nombre => `Hola ${nombre}`;</code></pre>
+  </section>
+
+  <!-- Sección: Callback (teoría) -->
+  <section>
+    <h3>Callback (Función de Retorno de Llamada)</h3>
+    <ul>
+      <li><strong>Definición Ampliada:</strong> Función pasada como argumento y ejecutada al finalizar otra función.</li>
+      <li><strong>Uso:</strong> En eventos, <code>setTimeout</code>, APIs, etc.</li>
+      <li><strong>Cuándo es necesario:</strong> Para tareas asíncronas o con espera.</li>
+      <li><strong>Ventaja:</strong> Permite asincronía sin bloquear el flujo del programa.</li>
+    </ul>
+  </section>
+
+  <!-- Sección: Callback (ejemplo) -->
+  <section>
+    <h2>Callback</h2>
+    <p>Un callback se pasa a otra función y se ejecuta cuando termina una operación.</p>
+    <p><strong>Ejemplo típico:</strong></p>
+    <pre><code>function mostrarResultado(callback) {
+  const resultado = 5 + 3;
+  callback(resultado);
+}
+
+mostrarResultado(res => {
+  console.log("El resultado es", res);
+});</code></pre>
+  </section>
+
+  <!-- Sección: Promesas (teoría) -->
+  <section>
+    <h3>Promesas</h3>
+    <ul>
+      <li><strong>Definición Ampliada:</strong> Objeto que representa el resultado de una operación asíncrona.</li>
+      <li><strong>Uso:</strong> Para manejar tareas como fetch, lectura de archivos, etc.</li>
+      <li><strong>Cuándo es necesario:</strong> Para tareas que toman tiempo y requieren respuesta.</li>
+      <li><strong>Ventaja:</strong> Mejor estructura, evita "callback hell" y facilita manejo de errores.</li>
+    </ul>
+  </section>
+
+  <!-- Sección: Promesas (ejemplo) -->
+  <section>
+    <h2>Promesas</h2>
+    <p>Una promesa representa un valor futuro, con métodos para manejar éxito y error.</p>
+    <p><strong>¿Para qué sirve?</strong> Para manejar tareas asincrónicas como llamadas a APIs.</p>
+    <pre><code>fetch("https://api.com/datos")
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));</code></pre>
+  </section>
+
+  <!-- Sección: Async / Await (teoría) -->
+  <section>
+    <h3>Async/Await</h3>
+    <ul>
+      <li><strong>Definición Ampliada:</strong> Sintaxis moderna para trabajar con Promesas.</li>
+      <li><strong>Uso:</strong> Hace el código asincrónico más legible.</li>
+      <li><strong>Cuándo es necesario:</strong> Para evitar <code>.then()</code> y usar <code>try...catch</code> más intuitivo.</li>
+      <li><strong>Ventaja:</strong> Mejora la depuración y la legibilidad del código.</li>
+    </ul>
+  </section>
+
+  <!-- Sección: Async / Await (ejemplo) -->
+  <section>
+    <h2>Async / Await</h2>
+    <p><code>async</code> y <code>await</code> simplifican el uso de promesas.</p>
+    <p><strong>Ventajas:</strong> Código más claro y estructurado.</p>
+    <pre><code>async function obtenerDatos() {
+  try {
+    const res = await fetch("https://api.com/datos");
+    const data = await res.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}</code></pre>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 Repaso JS para React</p>
+    <p>By: <a href="#">Eliana Martínez ⚡</a></p>
+  </footer>
+
+</body>
+</html>
