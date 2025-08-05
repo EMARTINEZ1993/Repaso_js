@@ -20,6 +20,7 @@ document.getElementById("btnSaludar").addEventListener("click", () => {
       resultado.style.color = "red";
     });
 });
+
 function sumar() {
   const n1 = parseFloat(document.getElementById("n1").value); // Convertir el primer valor a número decimal
   const n2 = parseFloat(document.getElementById("n2").value); // Convertir el segundo valor a número decimal
